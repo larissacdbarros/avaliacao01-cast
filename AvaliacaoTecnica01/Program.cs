@@ -26,9 +26,8 @@ namespace Avaliacao01
              produto e a quantidade mínima e máxima para alguém responsável quando estes limites forem atingidos
 
 
-            >>>>>>>>>> PROBLEMAS <<<<<<<<<<<<<<
-            
-            NÃO ESTA ARMAZEENADO AS INFORMAÇOES QUANDO SALVA
+           
+           
 
 
               */
