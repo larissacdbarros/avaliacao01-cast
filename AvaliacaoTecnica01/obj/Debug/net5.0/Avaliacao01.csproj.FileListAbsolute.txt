@@ -1,0 +1,16 @@
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.csproj.AssemblyReference.cache
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.AssemblyInfoInputs.cache
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.AssemblyInfo.cs
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.csproj.CoreCompileInputs.cache
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\bin\Debug\net5.0\Avaliacao01.exe
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\bin\Debug\net5.0\Avaliacao01.deps.json
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\bin\Debug\net5.0\Avaliacao01.runtimeconfig.json
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\bin\Debug\net5.0\Avaliacao01.runtimeconfig.dev.json
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\bin\Debug\net5.0\Avaliacao01.dll
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\bin\Debug\net5.0\Avaliacao01.pdb
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.dll
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\refint\Avaliacao01.dll
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.pdb
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\Avaliacao01.genruntimeconfig.cache
+D:\Documents\Cast\Turma de formação .Net\Aula 01\Projetos\Program\AvaliacaoTecnica01\AvaliacaoTecnica01\obj\Debug\net5.0\ref\Avaliacao01.dll
