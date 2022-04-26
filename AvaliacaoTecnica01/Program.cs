@@ -1,8 +1,9 @@
 ﻿using System;
 
+
 namespace Avaliacao01
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -32,14 +33,10 @@ namespace Avaliacao01
 
 
               */
-
             
-
-            Produto produtos = new Produto();
-            Funcionario funcionarios = new Funcionario();
-
-            Console.WriteLine("BEM VINDO AO SISTEMA");
-            funcionarios.AcessoFuncionarios();
+            Produto produto = new Produto();
+            
+            Funcionario funcionario = AcessoFuncionarios();
 
             bool sistema = true;
             while (sistema)
@@ -48,19 +45,19 @@ namespace Avaliacao01
                 {
                     case 1:
                         Console.Clear();
-                        produtos.CadastroProduto();
+                        produto.CadastroProduto();
                         break;
                     case 2:
                         Console.Clear();
-                        produtos.ListarProdutos();
+                        produto.ListarProdutos();
                         break;
                     case 3:
                         Console.Clear();
-                        produtos.Venda();
+                        produto.Venda(funcionario);
                         break;
                     case 4:
                         Console.Clear();
-                        funcionarios.CalculoComissao();
+                        CalculoComissao(funcionario);
                         break;
                     case 5:
                         Console.Clear();
@@ -73,8 +70,38 @@ namespace Avaliacao01
             
         }
 
+        public static Funcionario AcessoFuncionarios()
+        {
+            Funcionario[] allFuncionarios = FuncionarioRepository.FuncionariosCadastrados();
+            
+            while (true)
+            {
+                Console.Write("Vendedor informe seu ID para acessar o sistema:");
+                int id = int.Parse(Console.ReadLine());
+
+                foreach (Funcionario funcionario in allFuncionarios)
+                {
+                    if (funcionario.Id == id)
+                    {
+                       Console.WriteLine("Acesso liberado");
+                       return funcionario;
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Acesso negado! Informe um ID válido");
+                        break;
+                    }
+
+                }
+
+            }
+
+        }
+
         public static int Menu()
         {
+            Console.WriteLine("BEM VINDO AO SISTEMA");
             Console.WriteLine("\n \n MENU DE OPÇÕES \n------------------------ " +
                 "\n|1 - CADASTRAR PRODUTOS " +
                 "\n|2 - LISTAR PRODUTOS " +
@@ -86,6 +113,33 @@ namespace Avaliacao01
 
             int opcaoSelecionada = int.Parse(Console.ReadLine().Trim());
             return opcaoSelecionada;
+        }
+
+        public static void CalculoComissao(Funcionario funcionario)
+        {
+
+            Console.Write($"O valor da comissão do vendedor é :");
+            if (funcionario.QtdProdutosVendidos >= 0 && funcionario.QtdProdutosVendidos <= 5)
+            {
+                funcionario.Comissao = funcionario.ValorVendas * 0.004;
+                Console.WriteLine(funcionario.Comissao);
+            }
+            else if (funcionario.QtdProdutosVendidos >= 6 && funcionario.QtdProdutosVendidos <= 10)
+            {
+                funcionario.Comissao = funcionario.ValorVendas * 0.013;
+                Console.WriteLine(funcionario.Comissao);
+            }
+            else if (funcionario.QtdProdutosVendidos >= 11 && funcionario.QtdProdutosVendidos <= 15)
+            {
+                funcionario.Comissao = funcionario.ValorVendas * 0.03;
+                Console.WriteLine(funcionario.Comissao);
+            }
+            else
+            {
+                funcionario.Comissao = funcionario.ValorVendas * 0.05;
+                Console.WriteLine(funcionario.Comissao);
+            }
+
         }
 
     }

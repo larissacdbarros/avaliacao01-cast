@@ -8,14 +8,14 @@ namespace Avaliacao01
 {
     public class Funcionario
     {
-        private string Nome { get; set; }   
-        private int Id { get; set; }
-
-        private double ValorVendas { get; set; } 
+        public string Nome { get; set; }   
+        public int Id { get; set; }
         
-        private uint QtdProdutosVendidos { get; set; }
-
-        private double Comissao { get; set; }   
+        public double ValorVendas { get; set; } 
+        
+        public uint QtdProdutosVendidos { get; set; }
+       
+        public double Comissao { get; set; }   
 
         public Funcionario()
         {
@@ -27,74 +27,25 @@ namespace Avaliacao01
             this.Id = id;
         }
         
+
         
-        public void AcessoFuncionarios()
-        {
-            Funcionario[] allFuncionarios = FuncionarioRepository.FuncionariosCadastrados();
-            bool acesso = true;
-
-            while (acesso)
-            {
-                Console.Write("Vendedor informe seu ID para acessar o sistema:");
-                int id = int.Parse(Console.ReadLine());
-                
-                foreach (Funcionario funcionario in allFuncionarios)
-                {
-                    if (funcionario.Id == id)
-                    {
-                        Console.WriteLine("Acesso liberado");
-                        acesso = false;
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Acesso negado! Informe um ID válido");
-                        break;
-                    }
-                                     
-                }
-                
-            }
-           
-        }
-
-        public void CalculoComissao()
-        {
-            Funcionario f = new Funcionario();
-
-            Console.Write($"O valor da comissão do vendedor é :");
-            if(QtdProdutosVendidos >= 0 && QtdProdutosVendidos<= 5)
-            {
-                this.Comissao = ValorVendas * 0.004;
-                Console.WriteLine(this.Comissao);
-            }else if (QtdProdutosVendidos >= 6 && QtdProdutosVendidos <= 10)
-            {
-                this.Comissao = ValorVendas * 0.013;
-                Console.WriteLine(this.Comissao);
-            }
-            else if (QtdProdutosVendidos >= 11 && QtdProdutosVendidos <= 15)
-            {
-                this.Comissao = ValorVendas * 0.03;
-                Console.WriteLine(this.Comissao);
-            }
-            else
-            {
-                this.Comissao = ValorVendas * 0.05;
-                Console.WriteLine(this.Comissao);
-                }
-
-        }
 
         public void CalculadoraVendas(uint qtdProdutosVendidos)
         {
+            Console.WriteLine($"cal vendas antes : qtd produ vendidos{this.QtdProdutosVendidos}");
             this.QtdProdutosVendidos += qtdProdutosVendidos;
+            Console.WriteLine($"cal vendas depois; qtd produ vendidos{this.QtdProdutosVendidos}");
+
         }
 
         public void CalculadoraValorVendas(double valor)
         {
+            Console.WriteLine($"cal VALOR vendas antes : valor vendido{this.ValorVendas}");
             this.ValorVendas += valor;
+            Console.WriteLine($"cal VALOR vendas antes : valor vendido{this.ValorVendas}");
+
         }
-        
+
     }
 
     public class FuncionarioRepository

@@ -64,9 +64,9 @@ namespace Avaliacao01
             }
         }
 
-        public void Venda()
+        public void Venda(Funcionario funcionario)
         {
-            Funcionario funcionario = new Funcionario();
+            //Funcionario funcionario = new Funcionario();
 
             bool sistema = true;
             while (sistema)
@@ -86,9 +86,10 @@ namespace Avaliacao01
                         if (qtdProduto <= produto.Quantidade)
                         {
 
-                            produto.Quantidade = produto.Quantidade - qtdProduto;
-                            funcionario.CalculadoraVendas(produto.Quantidade);
-                            funcionario.CalculadoraValorVendas((produto.Preco * qtdProduto));
+                            produto.Quantidade = produto.Quantidade - qtdProduto; //quantidade de produtos no estoque
+                            funcionario.CalculadoraVendas(qtdProduto); //quantidade de produtos que está sendo vendida
+                           
+                            funcionario.CalculadoraValorVendas(produto.Preco * qtdProduto);
                             Console.WriteLine("Venda Realizada!");
                             Console.WriteLine($"A quantidade de {produto.Nome} agora é: {produto.Quantidade}");
 
